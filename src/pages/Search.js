@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 export default function Search() {
+  const [params] = useSearchParams();
+  console.log(params);
   return (
     <div>
       <h1>Search!</h1>
       <div>
-        <Link to="/product"> product </Link>
+        <Link to="/product"> product- {params.get('q')} </Link>
       </div>
     </div>
   );

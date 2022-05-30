@@ -13,6 +13,8 @@ export default function Header() {
       style={{
         display: 'flex',
         justifyContent: 'space-between',
+        borderBottom: 'solid 1px black',
+        padding: '12px',
       }}
     >
       <div>

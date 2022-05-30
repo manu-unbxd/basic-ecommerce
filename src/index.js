@@ -18,7 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product/:productId" element={<Product />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
