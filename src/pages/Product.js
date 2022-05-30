@@ -25,7 +25,7 @@ export default function Product() {
       });
   }, []);
   return (
-    <div>
+    <div className="container-body">
       {!error || (product && <div>Loading...</div>)}
       {product && (
         <div>
@@ -34,7 +34,7 @@ export default function Product() {
           <p>{product.description}</p>
         </div>
       )}
-      {error && <div>{error}</div>}
+      {error && <div className="error-msg">{error}</div>}
     </div>
   );
 }

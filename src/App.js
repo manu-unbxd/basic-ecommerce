@@ -3,7 +3,7 @@ import './style.css';
 
 export default function App() {
   return (
-    <div>
+    <div className="container-body">
       <h1>unbxdSearch!</h1>
     </div>
   );
