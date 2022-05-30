@@ -6,6 +6,7 @@ export default function Product() {
   let params = useParams();
   console.log(params, 'params');
   const [product, setProduct] = useState(null);
+  const [error, setError] = useState('');
   useEffect(() => {
     console.log(unbxdSearchConfig);
     fetch(
@@ -16,20 +17,24 @@ export default function Product() {
         const {
           response: { products },
         } = data;
-        setProduct(products[0]);
+        if (products.length === 1) {
+          setProduct(products[0]);
+        } else {
+          setError(`Failed to load the Product`);
+        }
       });
-  }, [params]);
+  }, []);
   return (
     <div>
-      {product ? (
+      {!error || (product && <div>Loading...</div>)}
+      {product && (
         <div>
           <h1>{product.title}</h1>
           <img src={product.imageUrl[0]} />
           <p>{product.description}</p>
         </div>
-      ) : (
-        <div>Loading...</div>
       )}
+      {error && <div>{error}</div>}
     </div>
   );
 }

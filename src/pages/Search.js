@@ -8,7 +8,7 @@ export default function Search() {
     <div>
       <h1>Search!</h1>
       <div>
-        <Link to="/product"> product- {params.get('q')} </Link>
+        <Link to="/product/p1234"> product- {params.get('q')} </Link>
       </div>
     </div>
   );

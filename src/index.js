@@ -12,14 +12,12 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-  <StrictMode>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/product/:productId" element={<Product />} />
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>
+  <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/search" element={<Search />} />
+      <Route path="/product/:productId" element={<Product />} />
+    </Routes>
+  </BrowserRouter>
 );
