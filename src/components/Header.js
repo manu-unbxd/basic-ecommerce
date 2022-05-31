@@ -1,13 +1,15 @@
 import React, { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
   let navigate = useNavigate();
+  let location = useLocation();
   const inputRef = useRef();
   const gotToSearch = (e) => {
-    navigate(`/search?q=${inputRef.current.value}`);
+    navigate(`/search#q=${inputRef.current.value}`);
   };
+  console.log(location, 'paramsparams');
   return (
     <header
       style={{
