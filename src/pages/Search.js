@@ -10,9 +10,7 @@ const unbxdCallbackEcma = function (instance, type, data) {};
 
 export default function Search() {
   let navigate = useNavigate();
-  const [params] = useSearchParams();
   const { hash } = useLocation();
-  console.log(hash, 'hash');
   const loadUnbxdSearch = () => {
     window.unbxdSearch = new window.UnbxdSearch({
       siteKey: unbxdSearchConfig.siteKey,
@@ -23,7 +21,6 @@ export default function Search() {
         el: document.getElementById('searchResultsWrapper'),
         productType: 'SEARCH',
         onProductClick: function (product, e) {
-          console.log(product, 'product,index', e);
           navigate(`/product/${product.uniqueId}`);
         },
       },
