@@ -74,9 +74,6 @@ export default function Search() {
                 </button>
               </div>
             </div>
-            <div className="UNX-m-facet-row">
-              <button className="UNX-m-facet-btn UNX-facet-trigger fa fa-filter"></button>
-            </div>
           </div>
           <div className="UNX-product-list">
             <div className="UNX-result-header">
