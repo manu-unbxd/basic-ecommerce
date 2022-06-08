@@ -1,3 +1,3 @@
-# react-hqjprz
+# search sdk playground
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-hqjprz)
+a starter kit for testing vanilla sdk
