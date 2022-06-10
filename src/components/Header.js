@@ -6,7 +6,7 @@ export default function Header() {
   let navigate = useNavigate();
   const inputRef = useRef();
   const gotToSearch = (e) => {
-    navigate(`/search?q=${inputRef.current.value}`);
+    navigate(`/search#q=${inputRef.current.value}`);
   };
   return (
     <header

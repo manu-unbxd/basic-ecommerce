@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.0.0",
+    "@unbxd-ui/react-search-sdk": "^1.2.3",
+    "@unbxd-ui/vanilla-search-library": "^2.0.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router": "^6.3.0",
